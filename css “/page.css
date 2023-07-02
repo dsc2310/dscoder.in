@@ -1,0 +1,99 @@
+.trackline{
+    position: relative;
+    top: 70px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+.trackline a{
+   color: black;
+   font-weight: bold;
+   font-size: 10px;
+}
+.track_active a{
+   color: rgb(253, 3, 3);
+   font-size: 14px;
+  
+}
+.content{
+    margin-top: 11vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    background: #fcfafa;
+    border-radius: 10px;
+}
+.content .contentbox{
+    position: relative;
+    width: 90%;
+    top:20px;
+    margin: auto;
+}
+.content .contentbox .type{
+   display: flex;
+}
+.content .contentbox .type .type_bg a{
+    background: rgb(255, 170, 0);
+    padding: 4px 7px;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+ }
+.content .contentbox  h1{
+   text-align: center;
+   margin-top: 20px;
+   font-size: 50px;
+}
+.content .contentbox  h3{
+    margin-top: 20px;
+ }
+.content .contentbox .postcard__subtitle{
+   text-align: center;
+}
+.content .contentbox img{
+    margin: auto;
+    margin-top: 30px;
+ }
+ .content .contentbox p{
+    margin-top: 5px;
+    font-size: 20px;
+ }
+ .content .contentbox h2{
+   font-size: 30px;
+   margin-top: 20px;
+}
+.content .contentbox .download{
+    width: 50%;
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+ }
+ .content .contentbox .download a{
+   color: black;
+   margin: 20px;
+   font-weight: bold;
+   
+ }
+ .content .contentbox .download a .download_file{
+   background: rgb(0, 17, 255);
+   padding: 5px 5px;
+   color: #fff;
+   border-radius: 5px;
+   transition: .3s linear;
+  }
+  .content .contentbox .download a .download_file:hover{
+    background: rgb(62, 74, 245);
+   }
+
+   .content .contentbox .download a .subscribe{
+    background: rgb(255, 0, 0);
+    padding: 5px 5px;
+    color: #fff;
+    border-radius: 5px;
+    transition: .3s linear;
+   }
+   .content .contentbox .download a .subscribe:hover{
+    background: rgb(241, 77, 77);
+    }
