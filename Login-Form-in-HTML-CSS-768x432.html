@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DS CODER</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script type="module"
+        src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+    <header class="header" id="header">
+        <section class="wrapper container">
+            <a href="index.html" class="brand">DS CODER</a>
+            <div class="burger" id="burger">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </div>
+            <span class="overlay"></span>
+            <nav class="navbar" id="navbar">
+                <ul class="menu" id="menu">
+                    <li class="menu-item"><a href="index.html" class="menu-link">HOME</a></li>
+                    <li class="menu-item"><a href="wordpress.html" class="menu-link">WORDPRESS</a></li>
+                    <li class="menu-item"><a href="elementor" class="menu-link">ELEMENTOR</a></li>
+                    <li class="menu-item"><a href="html.html" class="menu-link">HTML</a></li>
+                    <li class="menu-item"><a href="css.html" class="menu-link">CSS</a></li>
+                    <li class="menu-item"><a href="js.html" class="menu-link">JQUERY</a></li>
+
+                </ul>
+
+            </nav>
+        </section>
+    </header>
+    <div class="trackline">
+        <li class="track"><a href="index.html">HOME</a></li> &nbsp;/&nbsp;
+        <li class="track"><a href="html.html">HTML</a></li>&nbsp;/&nbsp;
+        <li class="track_active"><a href="">
+                Login Form in HTML and CSS
+            </a></li>
+    </div>
+    <div class="content">
+        <div class="contentbox">
+            <div class="type">
+                <li class="type_bg"><a href="html.html">HTML</a></li>
+                <li class="type_bg"><a href="css.html">CSS</a></li>
+            </div>
+            <h1 class="postcard__title blue">
+                Login Form in HTML and CSS</h1>
+            <div class="postcard__subtitle small">
+                <time datetime="2020-05-25 12:00:00">
+                    &nbsp;&nbsp;&nbsp;<i class='fa fa-user-circle'></i> By Divakar Rajput
+                    <i class="fas fa-calendar-alt mr-2"></i>
+                    &nbsp;&nbsp;<i class="	fa fa-calendar"></i> 1 July 2023
+                    &nbsp;&nbsp;<i class="	fa fa-clock-o"></i> 11:12PM
+                    &nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i> 1.5k+
+                </time>
+            </div>
+            <img src="img/Login-Form-in-HTML-CSS-768x432.png" style="width: 80%;">
+            <h2>Introduction</h2>
+            <p>Have you ever wanted to create a Login Form? In this post, we will learn how to design and implement a
+                Login Form using HTML, and CSS. So, let’s get started!</p>
+            <h2>1. What is a Login Form?</h2>
+            <p>A login form is a user interface element used in websites to authenticate users and grant them access to
+                a restricted area or personal account. It typically consists of two input fields, one for the username
+                or email address and another for the password. Users enter their credentials into these fields and
+                submit the form to verify their identity.</p>
+            <h2>2. Setting Up the HTML Structure</h2>
+            <p>To start, we’ll create the basic HTML structure for our Login Form.</p>
+            <div class="highlight" style="width: 100%; margin: auto;margin-top: 20px;">
+                <deckgo-highlight-code language="html">
+                    <code slot="code">
+
+                        &lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;title>Login - HTML and CSS&lt;/title>
+    &lt;!-- Custom CSS -->
+    &lt;link rel="stylesheet" href="style.css">
+&lt;/head>
+&lt;body>
+    
+    &lt;div class="container">
+
+        &lt;div class="form-container">
+
+            &lt;form action="" class="form">
+
+                &lt;h2>Welcome&lt;/h2>
+                &lt;input type="text" name="" id="" placeholder="username">
+                &lt;input type="password" name="" id="" placeholder="password">
+                &lt;input type="submit" value="Login">
+
+            &lt;/form>
+
+        &lt;/div>
+
+        &lt;div class="image-container">
+            &lt;img src="login-bg.jpg" alt="Login image">
+        &lt;/div>
+
+    &lt;/div>
+
+&lt;/body>
+&lt;/html>
+            </code>
+                </deckgo-highlight-code>
+            </div>
+
+            <h2>3. Styling the Login Form with CSS</h2>
+            <p>Next, we’ll style our Login Form using CSS. We’ll also import the Google Fonts “Poppins” so that the
+                fonts look nicer.</p>
+            <div class="highlight" style="width: 100%; margin: auto;margin-top: 20px;">
+                <deckgo-highlight-code language="css">
+                    <code slot="code">
+                        /* Import Google Fonts */
+                        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+                        
+                        *{
+                            margin: 0px;
+                            padding: 0px;
+                        }
+                        
+                        body{
+                            font-family: 'Poppins', sans-serif;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: aqua;
+                            height: 100vh;
+                        }
+                        
+                        .container{
+                            max-width: 760px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: #fff;
+                            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+                        }
+                        
+                        .form-container{
+                            background: linear-gradient(45deg, #0081f5, #00b4fc);
+                            padding: 100px 40px;
+                            text-align: center;
+                        }
+                        
+                        .form-container .form{
+                            width: 340px;
+                        }
+                        
+                        .form-container h2{
+                            font-size: 28px;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            color:#fff;
+                            letter-spacing: 3px;
+                        }
+                        
+                        .form-container input{
+                            display: block;
+                            margin: 0 auto;
+                            padding: 15px 0px;
+                            border-radius: 50px;
+                            border: none;
+                            width: 100%;
+                            margin: 20px 0px;
+                            text-align: center;
+                            letter-spacing: 2px;
+                        }
+                        
+                        .form-container input:focus{
+                            outline: none;
+                        }
+                        
+                        .form-container input[type="submit"]{
+                            background-color: #fa9111;
+                            font-size: 16px;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            color:#fff;
+                            cursor: pointer;
+                            transition: .5s all;
+                        }
+                        
+                        .form-container input[type="submit"]:hover{
+                            background-color: #fcac4b;
+                        }
+                        
+                        .image-container img{
+                            width: 100%;
+                        }
+                        
+                        @media screen and (max-width: 768px){
+                            .image-container{
+                                display: none;
+                            }
+                        }
+            </code>
+                </deckgo-highlight-code>
+            </div>
+
+            <h2>Conclusion</h2>
+            <p>Congratulations! You have successfully learned how to create a Login Form using HTML, and CSS.</p>
+            <h2>FAQs</h2>
+
+            <h3>Q1: Can I customize the appearance of the Login Form?</h3>
+            <p> Ans. Yes, you can customize the Login Form appearance by modifying the CSS code. Adjust the sizes,
+                colors, and positions to match your website’s design.</p>
+
+
+            <h3>Q2: How can I change the Image of the Login Form?</h3>
+            <p>You can replace the “login-bg.jpg” image file in the code with your desired image file. Make sure to
+                update the file name and extension accordingly.</p>
+
+
+            <h3>Q3: Does the Login Form work on all browsers?</h3>
+            <p>Yes, the Login Form should work on most modern web browsers, including Chrome, Firefox, Safari, and Edge.
+            </p>
+
+
+            <h3>Q4: Can I add additional functionality to the Login Form?</h3>
+            <p>Absolutely! You can extend the functionality of the Login Form by adding features such as Remember Me,
+                Forgot Password link, Register Button and Animations.</p>
+
+
+            <h3>Q5: Is the Login Form will work on Mobile?</h3>
+            <p>Yes, the Login Form is fully responsive and it will work on any device like Mobile, Tablet, and Desktop.
+            </p>
+
+        </div>
+    </div>
+<div class="download-container">
+    <a href="source code/login form.zip" class="download-btn"><i class="fa fa-download"></i> DOWNLOAD FILE </a>
+  </div>
+  <div class="download-container1">
+    <a href="https://www.youtube.com/@DS_CODER_" class="download-btn1"><i class="fa fa-youtube-play"></i> SUBSCRIBE </a>
+  </div>
+  
+
+    <section class="light">
+        <div class="container py-2">
+            <h1 class="postcard__title blue" style="text-align: center;">More Recent Post For You</h1>
+
+            <article class="postcard light blue">
+                <a class="postcard__img_link" href="Analog Clock with Sound in HTML – CSS – JS.html">
+                    <img class="postcard__img" src="img/1.png" alt="Image Title" />
+                </a>
+                <div class="postcard__text t-dark">
+                    <div class="type">
+                        <li class="type_bg"><a href="html.html">HTML</a></li>
+                        <li class="type_bg"><a href="css.html">CSS</a></li>
+                        <li class="type_bg"><a href="js.html">JavaScript</a></li>
+                    </div>
+                    <h1 class="postcard__title blue"><a href="Analog Clock with Sound in HTML – CSS – JS.html">Analog
+                            Clock with Sound in HTML – CSS – JS</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="2020-05-25 12:00:00">
+                            &nbsp;&nbsp;&nbsp;<i class='fa fa-user-circle'></i> By Divakar Rajput
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            &nbsp;&nbsp;<i class="	fa fa-calendar"></i> 30 Jun 2023
+                            &nbsp;&nbsp;<i class="	fa fa-clock-o"></i> 11:02PM
+                            &nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i> 1k+
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">Have you ever wanted to create an analog clock with sound? In
+                        this
+                        post, we will learn how to design and
+                        implement an analog clock with sound using HTML, CSS, and JavaScript.
+                        So, let’s get started!</div>
+                    <ul class="postcard__tagbox">
+                        <a href="Analog Clock with Sound in HTML – CSS – JS.html">
+                            <li class="tag__item"><i class="fa fa-paper-plane"></i>&nbsp;&nbsp;READ MORE</li>
+                        </a>
+                        <a href="https://www.youtube.com/@DS_CODER_">
+                            <li class="tag__item1"><i class="fa fa-youtube-play"></i>&nbsp;&nbsp;SUBSCRIBE</li>
+                        </a>
+                    </ul>
+                </div>
+            </article>
+
+
+        </div>
+    </section>
+
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <h3>Ds<span>Coder</span></h3>
+
+            <p class="footer-links">
+                <a href="index.html">Home</a>
+                |
+                <a href="wordpress.html">WordPress</a>
+                |
+                <a href="html.html">HTML</a>
+                |
+                <a href="JS.html">JQUERY</a>
+                |
+            </p>
+
+            <p class="footer-company-name">Copyright © 2021 <strong>DS CODER</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Aligarh (Uttar Pradesh)</span>
+                    Aligarh</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 97XXXXX57</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:divakarchauhan9758@gmail.com">Email Click Here</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+                <strong>DS CODER</strong> is a Youtube channel where you can find more creative HTML, CSS, JQUERY
+                Animations
+                and
+                Effects along with
+                HTML, JavaScript and Projects using C/C++.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+            </div>
+        </div>
+    </footer>
+    <div class="preloder" id="loader">
+        <div class="circle1">
+            <div class="circle2"></div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

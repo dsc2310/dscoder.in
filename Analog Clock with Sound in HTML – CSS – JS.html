@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DS CODER</title>
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'>
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script type="module"
+        src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+
+
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <section class="wrapper container">
+            <a href="index.html" class="brand">DS CODER</a>
+            <div class="burger" id="burger">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </div>
+            <span class="overlay"></span>
+            <nav class="navbar" id="navbar">
+                <ul class="menu" id="menu">
+                    <li class="menu-item"><a href="index.html" class="menu-link">HOME</a></li>
+                    <li class="menu-item"><a href="wordpress.html" class="menu-link">WORDPRESS</a></li>
+                    <li class="menu-item"><a href="elementor" class="menu-link">ELEMENTOR</a></li>
+                    <li class="menu-item"><a href="html.html" class="menu-link">HTML</a></li>
+                    <li class="menu-item"><a href="css.html" class="menu-link">CSS</a></li>
+                    <li class="menu-item"><a href="js.html" class="menu-link">JQUERY</a></li>
+
+                </ul>
+
+            </nav>
+        </section>
+    </header>
+    <div class="trackline">
+        <li class="track"><a href="index.html">HOME</a></li> &nbsp;/&nbsp;
+        <li class="track"><a href="html.html">HTML</a></li>&nbsp;/&nbsp;
+        <li class="track_active"><a href="">Analog Clock with Sound in HTML – CSS – JS</a></li>
+    </div>
+    <div class="content">
+        <div class="contentbox">
+            <div class="type">
+                <li class="type_bg"><a href="html.html">HTML</a></li>
+                <li class="type_bg"><a href="css.html">CSS</a></li>
+                <li class="type_bg"><a href="js.html">JavaScript</a></li>
+            </div>
+            <h1 class="postcard__title blue">Analog Clock with Sound in HTML – CSS – JS</h1>
+            <div class="postcard__subtitle small">
+                <time datetime="2020-05-25 12:00:00">
+                    &nbsp;&nbsp;&nbsp;<i class='fa fa-user-circle'></i> By Divakar Rajput
+                    <i class="fas fa-calendar-alt mr-2"></i>
+                    &nbsp;&nbsp;<i class="	fa fa-calendar"></i> 30 Jun 2023
+                    &nbsp;&nbsp;<i class="	fa fa-clock-o"></i> 11:02PM
+                    &nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i> 1k+
+                </time>
+            </div>
+            <img src="img/1.png" style="width: 80%;">
+            <h2>Introduction</h2>
+            <p>Have you ever wanted to create an analog clock with sound? In this post, we will learn how to design and
+                implement an analog clock with sound using HTML, CSS, and JavaScript.
+                So, let’s get started!</p>
+            <h2>1. What is an Analog Clock?</h2>
+            <p>An analog clock is a traditional timekeeping device that displays time through the position of hands on a
+                circular dial. It consists of an hour hand, a minute hand, and sometimes a second hand. In this
+                tutorial, we’ll recreate this classic timepiece using HTML, CSS, and JavaScript.</p>
+            <h2>2. Setting Up the HTML Structure</h2>
+            <p>To start, we’ll create the basic HTML structure for our analog clock.</p>
+            <div class="highlight" style="width: 100%; margin: auto;margin-top: 20px;">
+                <deckgo-highlight-code language="html">
+                    <code slot="code">
+                &lt;!DOCTYPE html>
+                &lt;html lang="en">
+                &lt;head>
+                &lt;meta charset="UTF-8">
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+                &lt;title>Analog Clock in HTML - CSS - JS</title>
+                &lt;!-- Custom CSS -->
+                &lt;link rel="stylesheet" href="style.css">
+                &lt;head>
+                &lt;body>
+                    
+                &lt;!-- Clock  -->
+                &lt;div class="clock">
+                        
+                &lt;div class="needle hr" style="--h:60px; --clr:red">&lt;span>&lt;/span>&lt;/div>
+                &lt;div class="needle mn" style="--h:80px; --clr:blue">&lt;span>&lt;/span>&lt;/div>
+                &lt;div class="needle ss" style="--h:100px; --clr:white">&lt;span>&lt;/span>&lt;/div>
+                
+                &lt;ul>
+                &lt;li style="--i:1"><span>1</span></li>
+                &lt;li style="--i:2"><span>2</span></li>
+                &lt;li style="--i:3"><span>3</span></li>
+                &lt;li style="--i:4"><span>4</span></li>
+                &lt;li style="--i:5"><span>5</span></li>
+                &lt;li style="--i:6"><span>6</span></li>
+                &lt;li style="--i:7"><span>7</span></li>
+                &lt;li style="--i:8"><span>8</span></li>
+                &lt;li style="--i:9"><span>9</span></li>
+                &lt;li style="--i:10"><span>10</span></li>
+                &lt;li style="--i:11"><span>11</span></li>
+                &lt;li style="--i:12"><span>12</span></li>
+                &lt;ul>
+                        
+                &lt;/div>
+                
+                &lt;-- Custom JS -->
+                &lt;script src="script.js"></script>
+                &lt;/body>
+                &lt;/html>
+            </code>
+                </deckgo-highlight-code>
+            </div>
+
+            <h2>3. Styling the Analog Clock with CSS</h2>
+            <p>Next, we’ll style our analog clock using CSS. We’ll also import the Google Fonts “Poppins” so that the
+                fonts look nicer.</p>
+            <div class="highlight" style="width: 100%; margin: auto;margin-top: 20px;">
+                <deckgo-highlight-code language="css">
+                    <code slot="code">
+                @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+            
+                *{
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                body{
+                    font-family: 'Poppins', sans-serif;
+                    background: rgb(238,174,202);
+                    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                }
+                
+                .clock{
+                    background-color: rgb(49,47,47);
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 50%;
+                    color: #fff;
+                    border: 5px solid #fff;
+                    box-shadow: 0px 0px 10px rgba(255,255,255,0.7), 0px 0px 20px rgba(0,0,0,0.7);
+                    font-size: 26px;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative; 
+                }
+                
+                .clock ul li{
+                    list-style: none;
+                    position: absolute;
+                    text-align: center;
+                    transform: rotate(calc(30deg * var(--i)));
+                    inset: 5px;
+                }
+                
+                .clock ul li span{
+                    transform: rotate(calc(-30deg * var(--i)));
+                    display: inline-block;
+                }
+                
+                .clock:after{
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    position: absolute;
+                }
+                
+                .needle{
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                }
+                
+                .needle span{
+                    width: 5px;
+                    height: var(--h);
+                    background-color: var(--clr);
+                    position: absolute;
+                    border-radius: 5px;
+                }
+            </code>
+                </deckgo-highlight-code>
+            </div>
+
+            <h2>4. Adding Functionality with JavaScript</h2>
+            <p>Now it’s time to make our analog clock functional using JavaScript. We’ll use JavaScript to update the
+                position of the clock needles based on the current time. To make our analog clock more engaging, we can
+                add sound effects to indicate the ticking of the clock.</p>
+            <div class="highlight" style="width: 100%; margin: auto;margin-top: 20px;">
+                <deckgo-highlight-code language="js">
+                    <code slot="code">
+                    function show_clock(){
+            
+                        let h = document.getElementsByClassName('hr')[0];
+                        let m = document.getElementsByClassName('mn')[0];
+                        let s = document.getElementsByClassName('ss')[0];
+                    
+                        let date = new Date(); 
+                    
+                        let hours = date.getHours();
+                        let minutes = date.getMinutes();
+                        let seconds = date.getSeconds();
+                    
+                        h.style.transform = `rotate(${30 * hours + minutes/2}deg)`;
+                        m.style.transform = `rotate(${6 * minutes}deg)`;
+                        s.style.transform = `rotate(${6 * seconds}deg)`;
+                    
+                        let sound = new Audio('sound.mp3');
+                        sound.play();
+                    }
+                    
+                    
+                    setInterval(show_clock, 1000);
+                </code>
+                </deckgo-highlight-code>
+            </div>
+
+            <h2>5. Testing and Troubleshooting</h2>
+            <p>Make sure the clock needles move correctly and the sound effects play as expected. If you encounter any
+                issues, check your code for errors and also check errors in inspect elements of the browser.</p>
+
+            <h2>Conclusion</h2>
+            <p>Congratulations! You have successfully learned how to create an analog clock with sound using HTML, CSS,
+                and JavaScript.</p>
+            <h2>FAQs</h2>
+
+            <h3>Q1: Can I customize the appearance of the analog clock?</h3>
+            <p> Ans. Yes, you can customize the analog clock’s appearance by modifying the CSS code. Adjust the sizes,
+                colors, and positions to match your website’s design.</p>
+            <h3>Q2: How can I change the ticking sound of the clock?</h3>
+            <p>You can replace the “sound.mp3” file in the code with your desired sound file. Make sure to update the
+                file name and extension accordingly.</p>
+            <h3>Q3: Does the analog clock work on all browsers?</h3>
+            <p>Yes, the analog clock should work on most modern web browsers, including Chrome, Firefox, Safari, and
+                Edge.</p>
+            <h3>Q4: Can I add additional functionality to the analog clock?</h3>
+            <p>Absolutely! You can extend the functionality of the analog clock by adding features such as alarm
+                settings, different time zones, or additional animations.</p>
+            <h3>Q5: Is it possible to embed the analog clock on multiple web pages?</h3>
+            <p>Yes, you can reuse the analog clock’s HTML, CSS, and JavaScript code on multiple web pages by linking to
+                the same files or copying the code snippet.</p>
+        </div>
+    </div>
+    <div class="download-container">
+        <a href="source code/Clock-HTML-CSS-JS-fixwebissues.com_.zip" class="download-btn"><i class="fa fa-download"></i> DOWNLOAD FILE </a>
+      </div>
+      <div class="download-container1">
+        <a href="https://www.youtube.com/@DS_CODER_" class="download-btn1"><i class="fa fa-youtube-play"></i> SUBSCRIBE </a>
+      </div>
+
+
+    <section class="light">
+        <div class="container py-2">
+            <h1 class="postcard__title blue" style="text-align: center;">More Recent Post For You</h1>
+
+            <article class="postcard light blue">
+                <a class="postcard__img_link" href="file/Login-Form-in-HTML-CSS-768x432.html">
+                    <img class="postcard__img" src="img/Login-Form-in-HTML-CSS-768x432.png" alt="Image Title" />
+                </a>
+                <div class="postcard__text t-dark">
+                    <div class="type">
+                        <li class="type_bg"><a href="html.html">HTML</a></li>
+                        <li class="type_bg"><a href="css.html">CSS</a></li>
+                    </div>
+                    <h1 class="postcard__title blue"><a href="file/Login-Form-in-HTML-CSS-768x432.html">Login Form in
+                            HTML and CSS</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="2020-05-25 12:00:00">
+                            &nbsp;&nbsp;&nbsp;<i class='fa fa-user-circle'></i> By Divakar Rajput
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            &nbsp;&nbsp;<i class="	fa fa-calendar"></i> 1 July 2023
+                            &nbsp;&nbsp;<i class="	fa fa-clock-o"></i> 11:12AM
+                            &nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i> 1.5k+
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">Have you ever wanted to create a Login Form? In this post, we
+                        will learn how to design and implement a Login Form using HTML, and CSS. So, let’s get started!
+                    </div>
+                    <ul class="postcard__tagbox">
+                        <a href="Login-Form-in-HTML-CSS-768x432.html">
+                            <li class="tag__item"><i class="fa fa-paper-plane"></i>&nbsp;&nbsp;READ MORE</li>
+                        </a>
+                        <a href="https://www.youtube.com/@DS_CODER_">
+                            <li class="tag__item1"><i class="fa fa-youtube-play"></i>&nbsp;&nbsp;SUBSCRIBE</li>
+                        </a>
+                    </ul>
+                </div>
+            </article>
+
+
+
+
+
+
+        </div>
+    </section>
+
+
+
+
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <h3>Ds<span>Coder</span></h3>
+
+            <p class="footer-links">
+                <a href="index.html">Home</a>
+                |
+                <a href="wordpress.html">WordPress</a>
+                |
+                <a href="html.html">HTML</a>
+                |
+                <a href="JS.html">JQUERY</a>
+                |
+            </p>
+
+            <p class="footer-company-name">Copyright © 2021 <strong>DS CODER</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Aligarh (Uttar Pradesh)</span>
+                    Aligarh</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 97XXXXX57</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:divakarchauhan9758@gmail.com">Email Click Here</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+                <strong>DS CODER</strong> is a Youtube channel where you can find more creative HTML, CSS, JQUERY
+                Animations
+                and
+                Effects along with
+                HTML, JavaScript and Projects using C/C++.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube-play"></i></a>
+            </div>
+        </div>
+    </footer>
+    <div class="preloder" id="loader">
+        <div class="circle1">
+            <div class="circle2"></div>
+        </div>
+    </div>
+
+
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
